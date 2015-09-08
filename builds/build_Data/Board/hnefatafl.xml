@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<descriptions>
+  <Board name = "Hnefatafl" image ="Ardri.jpg" size = "11"/>
+  
+  <KingSpot X = "5" Y = "5"/>
+
+  <SpecialSpace X = "0" Y = "0"/>
+  <SpecialSpace X = "10" Y = "0"/>
+  <SpecialSpace X = "0" Y = "10"/>
+  <SpecialSpace X = "10" Y = "10"/>
+
+  <BlackPiece X = "3" Y = "0"/>
+  <BlackPiece X = "4" Y = "0"/>
+  <BlackPiece X = "5" Y = "0"/>
+  <BlackPiece X = "6" Y = "0"/>
+  <BlackPiece X = "7" Y = "0"/>
+  <BlackPiece X = "5" Y = "1"/>
+  <BlackPiece X = "0" Y = "3"/>
+  <BlackPiece X = "0" Y = "4"/>
+  <BlackPiece X = "0" Y = "5"/>
+  <BlackPiece X = "0" Y = "6"/>
+  <BlackPiece X = "0" Y = "7"/>
+  <BlackPiece X = "1" Y = "5"/>
+  <BlackPiece X = "3" Y = "10"/>
+  <BlackPiece X = "4" Y = "10"/>
+  <BlackPiece X = "5" Y = "10"/>
+  <BlackPiece X = "6" Y = "10"/>
+  <BlackPiece X = "7" Y = "10"/>
+  <BlackPiece X = "5" Y = "9"/>
+  <BlackPiece X = "10" Y = "3"/>
+  <BlackPiece X = "10" Y = "4"/>
+  <BlackPiece X = "10" Y = "5"/>
+  <BlackPiece X = "10" Y = "6"/>
+  <BlackPiece X = "10" Y = "7"/>
+  <BlackPiece X = "9" Y = "5"/>
+
+  <WhitePiece X = "5" Y = "3"/>
+  <WhitePiece X = "4" Y = "4"/>
+  <WhitePiece X = "5" Y = "4"/>
+  <WhitePiece X = "6" Y = "4"/>
+  <WhitePiece X = "3" Y = "5"/>
+  <WhitePiece X = "4" Y = "5"/>
+  <WhitePiece X = "6" Y = "5"/>
+  <WhitePiece X = "7" Y = "5"/>
+  <WhitePiece X = "4" Y = "6"/>
+  <WhitePiece X = "5" Y = "6"/>
+  <WhitePiece X = "6" Y = "6"/>
+  <WhitePiece X = "5" Y = "7"/>
+</descriptions>

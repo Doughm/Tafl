@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<descriptions>
+  <Board name = "Tablut" image ="Ardri.jpg" size = "9"/>
+
+  <KingSpot X = "4" Y = "4"/>
+  
+  <SpecialSpace X = "0" Y = "0"/>
+  <SpecialSpace X = "8" Y = "0"/>
+  <SpecialSpace X = "0" Y = "8"/>
+  <SpecialSpace X = "8" Y = "8"/>
+
+  <BlackPiece X = "3" Y = "0"/>
+  <BlackPiece X = "4" Y = "0"/>
+  <BlackPiece X = "5" Y = "0"/>
+  <BlackPiece X = "4" Y = "1"/>
+  <BlackPiece X = "0" Y = "3"/>
+  <BlackPiece X = "0" Y = "4"/>
+  <BlackPiece X = "0" Y = "5"/>
+  <BlackPiece X = "1" Y = "4"/>
+  <BlackPiece X = "3" Y = "8"/>
+  <BlackPiece X = "4" Y = "8"/>
+  <BlackPiece X = "5" Y = "8"/>
+  <BlackPiece X = "4" Y = "7"/>
+  <BlackPiece X = "8" Y = "3"/>
+  <BlackPiece X = "8" Y = "4"/>
+  <BlackPiece X = "8" Y = "5"/>
+  <BlackPiece X = "7" Y = "4"/>
+
+  <WhitePiece X = "4" Y = "2"/>
+  <WhitePiece X = "4" Y = "3"/>
+  <WhitePiece X = "2" Y = "4"/>
+  <WhitePiece X = "3" Y = "4"/>
+  <WhitePiece X = "4" Y = "5"/>
+  <WhitePiece X = "4" Y = "6"/>
+  <WhitePiece X = "5" Y = "4"/>
+  <WhitePiece X = "6" Y = "4"/>
+
+</descriptions>

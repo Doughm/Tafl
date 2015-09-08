@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<descriptions>
+  <Board name = "Ard Ri" image ="Ardri.jpg" size = "7"/>
+  
+  <KingSpot X = "3" Y = "3"/>
+
+  <SpecialSpace X = "0" Y = "0"/>
+  <SpecialSpace X = "6" Y = "0"/>
+  <SpecialSpace X = "0" Y = "6"/>
+  <SpecialSpace X = "6" Y = "6"/>
+
+  <BlackPiece X = "2" Y = "0"/>
+  <BlackPiece X = "3" Y = "0"/>
+  <BlackPiece X = "4" Y = "0"/>
+  <BlackPiece X = "3" Y = "1"/>
+  <BlackPiece X = "0" Y = "2"/>
+  <BlackPiece X = "0" Y = "3"/>
+  <BlackPiece X = "0" Y = "4"/>
+  <BlackPiece X = "1" Y = "3"/>
+  <BlackPiece X = "6" Y = "2"/>
+  <BlackPiece X = "6" Y = "3"/>
+  <BlackPiece X = "6" Y = "4"/>
+  <BlackPiece X = "5" Y = "3"/>
+  <BlackPiece X = "2" Y = "6"/>
+  <BlackPiece X = "3" Y = "6"/>
+  <BlackPiece X = "4" Y = "6"/>
+  <BlackPiece X = "3" Y = "5"/>
+
+  <WhitePiece X = "2" Y = "2"/>
+  <WhitePiece X = "3" Y = "2"/>
+  <WhitePiece X = "4" Y = "2"/>
+  <WhitePiece X = "4" Y = "3"/>
+  <WhitePiece X = "2" Y = "3"/>
+  <WhitePiece X = "2" Y = "4"/>
+  <WhitePiece X = "3" Y = "4"/>
+  <WhitePiece X = "4" Y = "4"/>
+</descriptions>
