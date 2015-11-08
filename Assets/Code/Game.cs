@@ -44,8 +44,8 @@ public class Game : MonoBehaviour
     public bool inMenu { get; set; }
     public bool isBlackTurn { get; set; }
     public bool isGameOver { get; set; }
-
     private bool isDrawn;
+    private bool demoMode = false;
 
     //network
     private Network network = new Network();
@@ -382,7 +382,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    //rotates the camera
+    //rotates the camera with the mouse
     private void rotateCamera()
     {
         //right click
@@ -396,6 +396,21 @@ public class Game : MonoBehaviour
             {
                 Camera.main.transform.RotateAround(boardArray[boardSize / 2, boardSize / 2].transform.position, Vector3.back, cameraSpeed * Input.GetAxis("Mouse X"));
             }
+        }
+    }
+
+    //rotates the camera in demo mode
+    private void demoModeEnable()
+    {
+        //turns demo mode on
+        if (Input.GetButtonDown("Demo") == true)
+        {
+            demoMode = true;
+        }
+        //moves the camera if demo mode is turned on
+        if (demoMode == true)
+        {
+            Camera.main.transform.RotateAround(boardArray[boardSize / 2, boardSize / 2].transform.position, Vector3.back, cameraSpeed * 0.1f);
         }
     }
 
@@ -461,6 +476,7 @@ public class Game : MonoBehaviour
         {
             selectPiece();
             rotateCamera();
+            demoModeEnable();
         }
 	}
 
@@ -763,7 +779,6 @@ public class Game : MonoBehaviour
                     {
                         whitePiecesCount--;
                     }
-                    //Destroy(pieces[boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().clearTile();
                 }
@@ -789,7 +804,6 @@ public class Game : MonoBehaviour
                     {
                         whitePiecesCount--;
                     }
-                    //Destroy(pieces[boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().clearTile();
                 }
@@ -815,7 +829,6 @@ public class Game : MonoBehaviour
                     {
                         whitePiecesCount--;
                     }
-                    //Destroy(pieces[boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().clearTile();
                 }
@@ -841,7 +854,6 @@ public class Game : MonoBehaviour
                     {
                         whitePiecesCount--;
                     }
-                    //Destroy(pieces[boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().clearTile();
                 }
@@ -861,7 +873,6 @@ public class Game : MonoBehaviour
                 if (boardArray[(int)position.x + 2, (int)position.y].GetComponent<TileScript>().isSpecialTile &&
                     boardArray[(int)position.x + 2, (int)position.y].GetComponent<TileScript>().isKing == false)
                 {
-                    //Destroy(pieces[boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x + 1, (int)position.y].GetComponent<TileScript>().clearTile();
                 }
@@ -878,7 +889,6 @@ public class Game : MonoBehaviour
                 if (boardArray[(int)position.x - 2, (int)position.y].GetComponent<TileScript>().isSpecialTile &&
                     boardArray[(int)position.x - 2, (int)position.y].GetComponent<TileScript>().isKing == false)
                 {
-                    //Destroy(pieces[boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x - 1, (int)position.y].GetComponent<TileScript>().clearTile();
                 }
@@ -895,7 +905,6 @@ public class Game : MonoBehaviour
                 if (boardArray[(int)position.x, (int)position.y + 2].GetComponent<TileScript>().isSpecialTile &&
                     boardArray[(int)position.x, (int)position.y + 2].GetComponent<TileScript>().isKing == false)
                 {
-                    //Destroy(pieces[boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x, (int)position.y + 1].GetComponent<TileScript>().clearTile();
                 }
@@ -912,7 +921,6 @@ public class Game : MonoBehaviour
                 if (boardArray[(int)position.x, (int)position.y - 2].GetComponent<TileScript>().isSpecialTile &&
                     boardArray[(int)position.x, (int)position.y - 2].GetComponent<TileScript>().isKing == false)
                 {
-                    //Destroy(pieces[boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().pieceIndex]);
                     pieces[boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().pieceIndex].gameObject.SetActive(false);
                     boardArray[(int)position.x, (int)position.y - 1].GetComponent<TileScript>().clearTile();
                 }
@@ -933,6 +941,7 @@ public class Game : MonoBehaviour
                 GameObject.Find("BigText").GetComponent<CanvasGroup>().alpha = 1;
                 GameObject.Find("BigText").GetComponent<Text>().text = "Defenders Win!";
                 isGameOver = true;
+                demoMode = false;
                 gameMenuButtonDisappear();
             }
         }
@@ -951,6 +960,7 @@ public class Game : MonoBehaviour
                 GameObject.Find("BigText").GetComponent<CanvasGroup>().alpha = 1;
                 GameObject.Find("BigText").GetComponent<Text>().text = "Attakers Win!";
                 isGameOver = true;
+                demoMode = false;
                 gameMenuButtonDisappear();
             }
         }
@@ -1081,6 +1091,7 @@ public class Game : MonoBehaviour
             GameObject.Find("BigText").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("BigText").GetComponent<Text>().text = "The Game is a Draw";
             isGameOver = true;
+            demoMode = false;
             gameMenuButtonDisappear();
         }
     }
