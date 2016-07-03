@@ -405,7 +405,14 @@ public class Game : MonoBehaviour
         //turns demo mode on
         if (Input.GetButtonDown("Demo") == true)
         {
-            demoMode = true;
+            if (demoMode == false)
+            {
+                demoMode = true;
+            }
+            else
+            {
+                demoMode = false;
+            }
         }
         //moves the camera if demo mode is turned on
         if (demoMode == true)
